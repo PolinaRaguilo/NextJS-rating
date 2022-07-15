@@ -22,10 +22,12 @@ a {
 :root {
 	--black: #3B434E;
 	--light-grey: #EBEBEB;
+	--grey: #B3C0D9;
 	--white: white;
 	--primary: #7653FC;
 	--primary-hover: #6344DF;
 	--red: #FC836D;
+	--dark-red: #DE0000;
 	--green: #1DC37E;
 	--light-green: #C8F8E4;
 	--font-family: "Noto Sans KR", sans-serif;
