@@ -13,7 +13,6 @@ interface IHomeProps extends Record<string, unknown> {
 
 const Home = ({ menu, firstCategory }: IHomeProps): JSX.Element => {
   const [rating, setRating] = useState<number>(3);
-  console.log(menu);
   return (
     <>
       <Htag tag="h1">TEST</Htag>
