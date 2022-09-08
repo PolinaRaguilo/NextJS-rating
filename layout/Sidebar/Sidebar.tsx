@@ -7,7 +7,7 @@ import styles from "./Sidebar.module.css";
 const Sidebar = ({ className, ...props }: ISidebarProps) => {
   return (
     <div className={cn(className, styles.sidebar)} {...props}>
-      <LogoIcon className={styles.logo} />
+      <LogoIcon />
       <div>поиск</div>
       <Menu />
     </div>

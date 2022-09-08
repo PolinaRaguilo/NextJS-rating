@@ -12,25 +12,31 @@ import { ITopPage, TopLevelCategory } from "../../interfaces/page";
 import { IProduct } from "../../interfaces/product";
 import { withLayout } from "../../layout/Layout";
 import { firstLevelMenu } from "../../layout/Menu/constants";
+import { TopPageComponent } from "../../page-components";
 
-interface ICourseProps extends Record<string, unknown> {
+interface ITopPageProps extends Record<string, unknown> {
   menu: IMenuItem[];
   firstCategory: TopLevelCategory;
   page: ITopPage;
   products: IProduct[];
 }
 
-const Course = ({
+const TopPage = ({
   menu,
   firstCategory,
   page,
   products,
-}: ICourseProps): JSX.Element => {
-  const [rating, setRating] = useState<number>(3);
-  return <></>;
+}: ITopPageProps): JSX.Element => {
+  return (
+    <TopPageComponent
+      page={page}
+      firstCategory={firstCategory}
+      products={products}
+    />
+  );
 };
 
-export default withLayout(Course);
+export default withLayout(TopPage);
 
 export const getStaticPaths: GetStaticPaths = async () => {
   let paths: string[] = [];

@@ -1,0 +1,27 @@
+.hhCountTitle{
+    font-weight: 300;
+font-size: 20px;
+line-height: 27px;
+padding-bottom: 10px;
+}
+
+.hhSalaryValue{
+    font-weight: 700;
+font-size: 26px;
+line-height: 35px;
+padding-bottom: 10px;
+}
+
+
+.hhSalaryStars{
+    display: grid;
+    grid-template-columns: repeat(3,25px);
+    justify-content: center;
+    gap: 10px;
+}
+
+.filled circle {
+    fill: var(--red)
+}
+
+

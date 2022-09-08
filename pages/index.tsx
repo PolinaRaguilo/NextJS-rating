@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next";
 import { useState } from "react";
-import { Button, Htag, Rating, Tag, Text } from "../components";
+import { Button, Htag, Tag, Text } from "../components";
 import { withLayout } from "./../layout/Layout";
 import axios from "axios";
 import { TOP_PAGES_ROUTE } from "../constants/routes";
@@ -24,7 +24,7 @@ const Home = ({ menu, firstCategory }: IHomeProps): JSX.Element => {
       </Button>
       <Text>TextText</Text>
       <Tag variant="outlined">hh.ru</Tag>
-      <Rating isEditable rating={rating} setRating={setRating} />
+      {/* <Rating isEditable rating={rating} setRating={setRating} /> */}
     </>
   );
 };

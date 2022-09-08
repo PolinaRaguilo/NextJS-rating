@@ -1,0 +1,111 @@
+.titleWrapper {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: baseline;
+    justify-items: left;
+    gap: 20px;
+}
+
+
+
+.hhTitleWrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-items: left;
+    align-items: baseline;
+    gap: 20px;
+}
+
+.hhContentWrapper {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 30px;
+}
+
+.hhCount {
+    padding: 20px;
+    text-align: center;
+}
+
+.hhCountTitle {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 27px;
+    padding-bottom: 10px;
+}
+
+.hhCountNumber{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+    color: var(--primary)
+}
+
+.salaryWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
+    text-align: center;
+    gap: 20px 0;
+}
+
+.salaryWrapper>div {
+    border-right: 1px solid var(--light-grey);
+}
+
+.salaryWrapper>div:last-child {
+    border-right: none;
+}
+
+.advantagesWrapper{
+    padding-top: 50px;
+}
+
+.seo h1 {
+	margin: 0;
+
+	font-size: 26px;
+	font-weight: 500;
+	line-height: 35px;
+}
+
+.seo h2 {
+	margin: 0;
+
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 30px;
+	padding-bottom: 20px;
+}
+
+.seo h3 {
+	margin: 0;
+
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 27px;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+	.hhContentWrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 640px) {
+	.salaryWrapper {
+        grid-template-columns: 1fr;
+
+    }
+    
+    .salaryWrapper>div {
+        border-right:none;
+        border-bottom: 1px solid var(--light-grey);
+        padding-bottom: 20px;
+    }
+    .salaryWrapper>div:last-child {
+        border-bottom: none;
+    }
+}
