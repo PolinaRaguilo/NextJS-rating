@@ -1,21 +1,35 @@
-import { Card, Htag, SalaryInfoCard, Tag } from "../../components";
+import { Card, Htag, SalaryInfoCard, Sort, Tag } from "../../components";
 import { ITopPageComponentProps } from "./TopPageComponent.props";
 import styles from "./TopPageComponent.module.css";
 import RateIcon from "../../assets/icons/RateIcon";
 import { TopLevelCategory } from "../../interfaces/page";
 import Advantage from "../../components/Advantage";
+import { SortEnum } from "../../components/Sort/Sort.props";
+import { useReducer } from "react";
+import { sortReducer } from "./reducers/sort.reducer";
 
 const TopPageComponent = ({
   firstCategory,
   page,
   products,
 }: ITopPageComponentProps) => {
+  const [{ products: sortProducts, sort }, dispatchSort] = useReducer(
+    sortReducer,
+    {
+      products,
+      sort: SortEnum.Rating,
+    }
+  );
+
+  const setSort = (sort: SortEnum) => {
+    dispatchSort({ type: sort });
+  };
   return (
     <div>
       <div className={styles.titleWrapper}>
         <Htag tag="h1">{page.title}</Htag>
         <Tag variant="grey">{products && products.length}</Tag>
-        <span>Сортировка</span>
+        <Sort sort={sort} setSort={setSort} />
       </div>
       {products &&
         products.map((product) => {

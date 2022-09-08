@@ -1,0 +1,27 @@
+.sortWrapper{
+    display: flex;
+}
+
+.sortWrapper span:first-child{
+    padding-right: 40px;
+}
+
+.filterWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.filterWrapper svg {
+   margin-right: 15px;
+}
+
+.filterWrapper p {
+   cursor: pointer;
+ }
+ 
+
+
+.active {
+    color: var(--primary);
+    font-weight: 700;
+}
